@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "93adc3b8-d70b-47f4-9257-d5eeb4e7aedd",
+		"name": "restful01",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "toys",
+			"item": [
+				{
+					"name": "get toys",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/toys/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"toys",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Options - get toys",
+					"request": {
+						"method": "OPTIONS",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/toys/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"toys",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create toy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"{{$randomProductName}}\",\r\n    \"description\": \"{{$randomLoremSentence}}\",\r\n    \"release_date\": \"2020-08-26T00:32:52Z\",\r\n    \"toy_category\": \"01\",\r\n    \"was_included_in_home\": {{$randomBoolean}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/toys/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"toys",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
