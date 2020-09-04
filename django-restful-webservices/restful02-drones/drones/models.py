@@ -33,14 +33,14 @@ class Drone(models.Model):
 class Pilot(models.Model):
     MALE = 'M'
     FEMALE = 'F'
-    GENDER_CHOICE = (
+    GENDER_CHOICES = (
         (MALE, 'Male'),
         (FEMALE, 'Female'),
     )
     name = models.CharField(max_length=150, blank=False, default='')
     gender = models.CharField(
         max_length=2,
-        choices=GENDER_CHOICE,
+        choices=GENDER_CHOICES,
         default=MALE
     )
     races_count = models.IntegerField()
