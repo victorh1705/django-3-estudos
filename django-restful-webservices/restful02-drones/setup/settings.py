@@ -71,6 +71,14 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'setup.wsgi.application'
 
+# Pagination
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS':
+        'drones.custompagination.LimitOffsetPaginationWithUpperBound',
+    'PAGE_SIZE': 4
+}
+
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
