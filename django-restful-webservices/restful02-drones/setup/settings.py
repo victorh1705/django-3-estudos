@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'django_filters',
     'drones',
 ]
 
@@ -76,7 +77,12 @@ WSGI_APPLICATION = 'setup.wsgi.application'
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS':
         'drones.custompagination.LimitOffsetPaginationWithUpperBound',
-    'PAGE_SIZE': 4
+    'PAGE_SIZE': 4,
+    'DEFAULT_FILTER_BACKENDS': (
+        'django_filters.rest_framework.DjangoFilterBackend',
+        'rest_framework.filters.OrderingFilter',
+        'rest_framework.filters.SearchFilter',
+    ),
 }
 
 
