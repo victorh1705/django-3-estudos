@@ -40,8 +40,8 @@ class DroneList(generics.ListCreateAPIView):
     filter_fields = (
         'name',
         'drone_category',
-        'manufacturing_date',
-        'has_it_competed',
+        'manufactured_date',
+        'has_is_completed',
     )
     search_fields = ('^name',)
     ordering_fields = (
