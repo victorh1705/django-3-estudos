@@ -1,5 +1,9 @@
-def cpf_valido(cpf):
-    return len(cpf) == 11
+from validate_docbr import CPF
+
+
+def cpf_valido(numero_cpf):
+    cpf = CPF()
+    return cpf.validate(numero_cpf)
 
 
 def nome_valido(nome):
