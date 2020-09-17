@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "3ba50306-79fd-4c37-a1dc-ca8322a2539a",
+		"name": "api_rest02",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "clientes",
+			"item": [
+				{
+					"name": "get Clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/clientes",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Clientes Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/clientes",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Clientes with Filter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/clientes/?search=Ana",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"clientes",
+								""
+							],
+							"query": [
+								{
+									"key": "ativo",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "search",
+									"value": "Ana"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add clientes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"{{$randomFullName}}\",\r\n    \"email\": \"{{$randomExampleEmail}}\",\r\n    \"cpf\": \"{{$randomCreditCardMask}}\",\r\n    \"rg\": \"{{$randomCreditCardMask}}\",\r\n    \"celular\": \"{{$randomPhoneNumberExt}}\",\r\n    \"ativo\": {{$randomBoolean}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/clientes",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
